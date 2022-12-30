@@ -7,14 +7,18 @@ import { useState, useEffect } from "react";
 //Some examples of side effects are: fetching data, directly updating the DOM, and timer
 
 import React, { Component } from 'react'
-import { Button, Form, Loader } from "semantic-ui-react";
+import { Button, Form, Loader,Grid} from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css'
 import { useRouter } from "next/router";
 
 const NewNote = () => {
+
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
     // form is the current state
     //is the function that is used to update our state
-    const [form,setForm] = useState({title:'', description:''})// initial value is an object, whose values are blank
+    const [form,setForm] = useState({title:'', description:'', dateCreated:date,dateModified:date})// initial value is an object, whose values are blank
 
     const [isSubmitting, setIsSubmitting] = useState(false); // initial value are blank 
     // state variable to keep track of when we are submitting
@@ -82,6 +86,12 @@ const NewNote = () => {
         }
         if(!form.description){
             err.description='Description is required';
+        }
+        if(!form.dateCreated){
+            err.description='date Created is required';
+        }
+        if(!form.dateModified){
+            err.description='date Modified is required';
         }
         return err;
     }

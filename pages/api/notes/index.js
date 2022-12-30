@@ -25,11 +25,14 @@ export default async (req,res) =>{
             }
             break;
         case 'POST':
-        // to test this in postman or web, create a POST request to "http://localhost:3001/api/notes" and a body 
+        // to test this in postman, create a POST request to "http://localhost:3001/api/notes" and a body 
         /**
-         * {
-         * "title": "Test note",
-         * "description": "Test description"}
+        * {
+            "title":  "Test note 8",
+            "description": "Test description8",
+            "dateCreated": "21/02/2022",
+            "dateModified": "21/02/2022"
+        }
          */
             try {
                 const note = await Note.create(req.body);

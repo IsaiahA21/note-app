@@ -10,6 +10,10 @@ const Navbar = () => (
         <Link href="/new" legacyBehavior>
             <a className="create">Create Note</a>
         </Link>
+
+        <Link href="/about" legacyBehavior>
+            <a className="create">About</a>
+        </Link>
     </nav>
 )
 

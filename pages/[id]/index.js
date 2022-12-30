@@ -4,7 +4,7 @@
 import fetch from 'isomorphic-unfetch'
 import {useState, useEffect} from 'react'
 import {Router, useRouter } from "next/router";
-import { Confirm, Button, Loader, Container,Form } from 'semantic-ui-react';
+import { Confirm, Button, Loader, Grid, Form } from 'semantic-ui-react';
 
 // specificNote component will render out data so we need getInitialProps to fetch data
 const specificNote = ({ note }) => {//grab the note property

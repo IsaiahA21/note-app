@@ -2,7 +2,8 @@
 // the route will be localhost:3001/[note._id]/edit
 import fetch from 'isomorphic-unfetch'
 import {useState, useEffect} from 'react'
-import { Button, Loader, Router,Form } from 'semantic-ui-react';
+import { Button, Loader, Router,Form,Grid} from 'semantic-ui-react';
+
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { useRouter } from "next/router";
@@ -15,9 +16,13 @@ import { useRouter } from "next/router";
 
 
 const editNote = ({ note }) => {
+
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
     // form is the current state
     //is the function that is used to update our state
-    const [form,setForm] = useState({title:note.title, description:note.description, dateCreated: note.dateCreated, dateModified:date})// initial value is an object, whose values are blank
+    const [form,setForm] = useState({title:note.title, description:note.description, dateCreated: note.dateCreated, dateModified: date})// initial value is an object, whose values are blank
 
     const [isSubmitting, setIsSubmitting] = useState(false); // initial value are blank 
     // state variable to keep track of when we are submitting
@@ -85,6 +90,12 @@ const editNote = ({ note }) => {
         }
         if(!form.description){
             err.description='Description is required';
+        }
+        if(!form.dateCreated){
+            err.description='date Created is required';
+        }
+        if(!form.dateModified){
+            err.description='date Modified is required';
         }
         return err;
     }

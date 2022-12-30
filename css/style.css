@@ -6,6 +6,7 @@ h1 {
 .wrapper {
     max-width: 1200px;
     padding: 0 16px;
+    background-color: orange;
     margin: auto;
 }
 
@@ -37,15 +38,29 @@ h1 {
 .form-container{
     width: 400px;
     margin: 20px auto;
+    min-height: 100vh;
 }
 
 .note-container {
     text-align: center;
     width: auto;
+    min-height: 100vh;
 }
 
 .view-container {
     text-align: center;
     width: 400px;
     margin: 100px auto;
+    min-height: 100vh;
+}
+
+.footer {
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: gray;
+    color:  #fff;
+    display: flex;
+    justify-content: space-between;
 }

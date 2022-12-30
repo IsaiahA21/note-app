@@ -13,6 +13,16 @@ const NoteSchema = new mongooseDB.Schema({
         type: String,
         reuqired: true,
         maxlength: [200, 'Description cannot be more than 200 characters']
+    },
+    dateCreated: {
+        type: String,
+        required: true,
+        format: Date
+    },
+    dateModified: {
+        type: String,
+        required: true,
+        format: Date
     }
 })
 
