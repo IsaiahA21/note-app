@@ -4,7 +4,7 @@
 import fetch from 'isomorphic-unfetch'
 import {useState, useEffect} from 'react'
 import {Router, useRouter } from "next/router";
-import { Confirm, Button, Loader, Container } from 'semantic-ui-react';
+import { Confirm, Button, Loader, Container,Form } from 'semantic-ui-react';
 
 // specificNote component will render out data so we need getInitialProps to fetch data
 const specificNote = ({ note }) => {//grab the note property
@@ -58,13 +58,10 @@ const specificNote = ({ note }) => {//grab the note property
                     <Form>
                     <h1>{note.title}</h1>
                     <p>{note.description}</p>
-<<<<<<< Updated upstream
-=======
                     <Form.Group widths='equal'>
                         <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={note.dateCreated}/>
                         <Form.Input fluid label="modified On" name="modifiedOn" readonly='' value={note.dateModified}/>
                     </Form.Group>
->>>>>>> Stashed changes
                     <Button color='red' onClick={openConfirmation}>Delete</Button>
                     </Form>
                 </>

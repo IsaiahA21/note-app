@@ -17,11 +17,7 @@ import { useRouter } from "next/router";
 const editNote = ({ note }) => {
     // form is the current state
     //is the function that is used to update our state
-<<<<<<< Updated upstream
-    const [form,setForm] = useState({title:note.title, description:note.description})// initial value is an object, whose values are blank
-=======
     const [form,setForm] = useState({title:note.title, description:note.description, dateCreated: note.dateCreated, dateModified:date})// initial value is an object, whose values are blank
->>>>>>> Stashed changes
 
     const [isSubmitting, setIsSubmitting] = useState(false); // initial value are blank 
     // state variable to keep track of when we are submitting
@@ -134,13 +130,10 @@ const editNote = ({ note }) => {
                             }
                             onChange={handleChange}
                             />
-<<<<<<< Updated upstream
-=======
                             <Form.Group widths='equal'>
                                 <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={form.dateCreated} />
                                 <Form.Input fluid label="modified On" name="modifiedOn" value={form.dateModified} />
                             </Form.Group>
->>>>>>> Stashed changes
                             <Button type="submit">Update</Button>
                         </Form>
                 }
