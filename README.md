@@ -18,6 +18,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+Link to the database:
+(https://cloud.mongodb.com/v2/63a7d1d792835c7d94600a7b#/metrics/replicaSet/63a7d2d1f44ba819c4c7fb7a/explorer)
 ## Background info
 * Followed a online resource on constructing a Note App using mongoDB, and semantic-ui
  * Made tweaks to the projects as so functionalities were outdated.
