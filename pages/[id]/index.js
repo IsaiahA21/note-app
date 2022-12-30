@@ -60,7 +60,7 @@ const specificNote = ({ note }) => {//grab the note property
                     <p>{note.description}</p>
                     <Form.Group widths='equal'>
                         <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={note.dateCreated}/>
-                        <Form.Input fluid label="modified On" name="modifiedOn" readonly='' value={note.dateModified}/>
+                        <Form.Input fluid label="Modified On" name="modifiedOn" readonly='' value={note.dateModified}/>
                     </Form.Group>
                     <Button color='red' onClick={openConfirmation}>Delete</Button>
                     </Form>

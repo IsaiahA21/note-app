@@ -138,8 +138,8 @@ const NewNote = () => {
                             onChange={handleChange}
                             />
                             <Form.Group widths='equal'>
-                                <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={form.dateCreated}/>
-                                <Form.Input fluid label="modified On" name="modifiedOn" readonly='' value={form.dateModified}/>
+                                <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={form.dateCreated} onChange={handleChange}/>
+                                <Form.Input fluid label="Modified On" name="modifiedOn" readonly='' value={form.dateModified} onChange={handleChange}/>
                             </Form.Group>
                             <Button type="submit">Create</Button>
                         </Form>

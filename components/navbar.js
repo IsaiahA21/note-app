@@ -8,7 +8,7 @@ const Navbar = () => (
             <a className="navbar-brand">Note App</a>
         </Link>
         <Link href="/new" legacyBehavior>
-            <a className="create">Create Note</a>
+            <a className="create">Create New Note</a>
         </Link>
 
         <Link href="/about" legacyBehavior>

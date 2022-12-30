@@ -143,7 +143,7 @@ const editNote = ({ note }) => {
                             />
                             <Form.Group widths='equal'>
                                 <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={form.dateCreated} />
-                                <Form.Input fluid label="modified On" name="modifiedOn" value={form.dateModified} />
+                                <Form.Input fluid label="Modified On" name="modifiedOn" value={form.dateModified} />
                             </Form.Group>
                             <Button type="submit">Update</Button>
                         </Form>

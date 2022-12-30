@@ -10,7 +10,7 @@ const About = () => {
     <main className={styles.main}>
       <Container className="ui teal message" textAlign='center'>
         <Header as='h2' color='violet'>About page</Header>
-        <p>following along with Jason Rivera tutorial on youtube</p>
+        <p>Following along with Jason Rivera's tutorial on YouTube</p>
         <p>
           Click for the <a  href="https://www.youtube.com/watch?v=tt9hws5JGRc" className="vid"> video </a>
  
