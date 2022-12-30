@@ -8,6 +8,7 @@ import { Confirm, Button, Loader, Container } from 'semantic-ui-react';
 
 // specificNote component will render out data so we need getInitialProps to fetch data
 const specificNote = ({ note }) => {//grab the note property
+
     const [confirmState, setConfirm] =useState(false); // this is meant to handle the confirm component for semantic
     // when we click the delete button, we want a loader to popup
     
@@ -54,9 +55,18 @@ const specificNote = ({ note }) => {//grab the note property
                 ? <Loader active />
                 : 
                 <>
+                    <Form>
                     <h1>{note.title}</h1>
                     <p>{note.description}</p>
+<<<<<<< Updated upstream
+=======
+                    <Form.Group widths='equal'>
+                        <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={note.dateCreated}/>
+                        <Form.Input fluid label="modified On" name="modifiedOn" readonly='' value={note.dateModified}/>
+                    </Form.Group>
+>>>>>>> Stashed changes
                     <Button color='red' onClick={openConfirmation}>Delete</Button>
+                    </Form>
                 </>
             }
             <Confirm
@@ -74,7 +84,6 @@ specificNote.getInitialProps = async ({query: {id}}) => {
     const res = await fetch(`http://localhost:3001/api/notes/${id}`);
 
     const {data} = await res.json();
-    console.log('%c⧭', 'color: #00bf00','rendering the data from button view: ' + data);
     return { note: data } //return an object, with the property called note
 }
 

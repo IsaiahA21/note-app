@@ -127,6 +127,13 @@ const NewNote = () => {
                             }
                             onChange={handleChange}
                             />
+<<<<<<< Updated upstream
+=======
+                            <Form.Group widths='equal'>
+                                <Form.Input fluid label="Created On" name="dateCreated" readonly='' value={form.dateCreated}/>
+                                <Form.Input fluid label="modified On" name="modifiedOn" readonly='' value={form.dateModified}/>
+                            </Form.Group>
+>>>>>>> Stashed changes
                             <Button type="submit">Create</Button>
                         </Form>
                 }
