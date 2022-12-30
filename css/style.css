@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+}
+
+/* #this will a a class that wraps all the content of our application so it is nice and positioned  */
+.wrapper {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: auto;
+}
+
+.navBar {
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #008cba;
+    color:  #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* style the text */
+.navBar .create{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navBar .navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.navBar-brand, .create:hover{
+    color: gray
+}
+.form-container{
+    width: 400px;
+    margin: 20px auto;
+}
+
+.note-container {
+    text-align: center;
+    width: auto;
+}
+
+.view-container {
+    text-align: center;
+    width: 400px;
+    margin: 100px auto;
+}
